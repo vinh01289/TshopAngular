@@ -8,8 +8,11 @@
         </tr>
     </div>
   </table>
-  <div *ngFor="let item of lsOrder">
-      <div>
-          {{item.name}} - {{item.id}}
-      </div>
-  </div> 
+  <div *ngIf="lsOrder">
+    <div *ngFor="let item of lsOrder.items">
+        <div>
+            {{item.code}} - {{item.shopName}}
+        </div>
+    </div> 
+  </div>
+  

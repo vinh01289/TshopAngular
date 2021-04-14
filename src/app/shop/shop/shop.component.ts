@@ -13,6 +13,7 @@ import { shopService } from 'src/app/services/shopservice.service';
 export class ShopComponent implements OnInit {
 
   user: UserProfile = null;
+  listAll : any;
   lsOrder:orderDto[]=[];
 
   constructor(private auth: AuthService, private router: Router, private shopservice: shopService) { }
@@ -23,7 +24,6 @@ export class ShopComponent implements OnInit {
     this.getAllList();
   }
 
-  listAll : any;
   getAllList(){
     this.shopservice.getList().subscribe(res=>{
       this.listAll = res;
