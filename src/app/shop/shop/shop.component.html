@@ -1,0 +1,15 @@
+<table style="width:100%">
+    <div *ngIf="listAll">
+        <tr *ngFor="let item of listAll.items">
+            
+            <button (click)="getIdShop(item.Id)">
+                {{item.name}}
+            </button>
+        </tr>
+    </div>
+  </table>
+  <div *ngFor="let item of lsOrder">
+      <div>
+          {{item.name}}
+      </div>
+  </div> 

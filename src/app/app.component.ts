@@ -18,6 +18,7 @@ ngOnInit(){
   {
     that.auth.logOut();
     this.router.navigate(['login']);
+    this.router.navigate(['shop']);
   }
 }
 }

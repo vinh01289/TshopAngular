@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: {
-    chatUrl: 'https://tshop.tpos.dev/'
+    chatUrl: 'https://localhost:44342/'
   }
 };
 

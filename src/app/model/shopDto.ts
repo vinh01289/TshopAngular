@@ -1,6 +1,5 @@
 export interface shopDto{
-
-    name : string;
+    Id: string;
     Code: string;
     Name: string;
     Address: string;
@@ -15,7 +14,7 @@ export interface shopDto{
     Flag: string;
     RatingForService: number;
     RatingForProduct: number;
-        LikeCount: number;
+    LikeCount: number;
     FollowCount: number;
     CompanyId: string;
   }
