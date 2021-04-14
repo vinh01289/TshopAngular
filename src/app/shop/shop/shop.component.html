@@ -2,14 +2,14 @@
     <div *ngIf="listAll">
         <tr *ngFor="let item of listAll.items">
             
-            <button (click)="getIdShop(item.Id)">
-                {{item.name}}
+            <button (click)="getIdShop(item.id)">
+                {{item.name}} - {{item.id}}
             </button>
         </tr>
     </div>
   </table>
   <div *ngFor="let item of lsOrder">
       <div>
-          {{item.name}}
+          {{item.name}} - {{item.id}}
       </div>
   </div> 

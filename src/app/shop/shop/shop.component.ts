@@ -31,6 +31,7 @@ export class ShopComponent implements OnInit {
     })
   }
   getIdShop(idShop: string){
+    console.log(idShop);
     this.shopservice.getListOrder(idShop).subscribe(res=>{
       console.log(res);
         this.lsOrder = res;
