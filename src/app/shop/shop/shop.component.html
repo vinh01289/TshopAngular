@@ -1,18 +1,25 @@
 <table style="width:100%">
     <div *ngIf="listAll">
-        <tr *ngFor="let item of listAll.items">
-            
-            <button (click)="getIdShop(item.id)">
-                {{item.name}} - {{item.id}}
+        <tr *ngFor="let item1 of listAll.items">
+            <button (click)="getIdShop(item1.id)">
+                {{item1.name}} - {{item1.address}}
             </button>
         </tr>
     </div>
+    <div *ngIf="lsOrder">
+        <div *ngFor="let item2 of lsOrder.items">
+            <div>
+                {{item2.shopName}}-{{item2.code}}
+            </div>
+            <div *ngFor="let item3 of item2.orderDetails">
+                <div>
+                    {{item3.productName}}
+                </div>
+            </div> 
+        </div> 
+        
+      </div>
   </table>
-  <div *ngIf="lsOrder">
-    <div *ngFor="let item of lsOrder.items">
-        <div>
-            {{item.code}} - {{item.shopName}}
-        </div>
-    </div> 
-  </div>
+  heelo vijh
+  
   

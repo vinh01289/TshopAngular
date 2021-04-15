@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home/home.component';
 import { AuthloginService } from './services/authloginservice.service';
+import { ShopComponent } from './shop/shop/shop.component';
 
 const routes: Routes = [
   { path: '', pathMatch : 'full', redirectTo: '/login' },
@@ -13,10 +15,15 @@ const routes: Routes = [
     canActivate: [AuthloginService],
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
   },
-  {
-    path: 'shop',
-    // canActivate: [AuthloginService],
-    loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule),
+  {path: 'home',
+    canActivate: [AuthloginService],
+    component: HomeComponent,
+    children: [
+      { path: 'Home', component: HomeComponent },
+      { path: 'shop', component: ShopComponent },
+      //{ path: 'ChangePW', component: ChangePasswordComponent }
+    //  {path: 'Department', component: DepartmentComponent}
+    ],
   },
 ];
 
