@@ -1,0 +1,6 @@
+::ng-deep td.nz-disable-td.ant-table-cell{
+    display:none;
+}
+.title{
+    font-size: 30px;
+}

@@ -78,4 +78,7 @@
     background: #fff;
     height: 100%;
   }
-  
+  .fas.fa-comment-dots:hover{
+    color: #1890ff;
+    width: 200px;
+  }

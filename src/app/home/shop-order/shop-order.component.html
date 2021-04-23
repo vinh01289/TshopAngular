@@ -1,20 +1,19 @@
-<h1>List order for Shop</h1>
-<nz-table #rowSelectionTable nzShowSizeChanger [nzData]="list"  *ngIf="lsOrder" style="margin-top: 10px;">
-    <div *ngFor="let item2 of lsOrder.items"> 
-            <tr>
-              <th>Tên Shop</th>
-              <th>Mã code</th>
-            </tr>
-            <tr>
-              <td>{{item2.shopName}}</td>
-              <td>{{item2.code}}</td>
-            </tr>
-          <div *ngFor="let item3 of item2.orderDetails">
-                  <th>Tên Sản Phẩm: </th>
-           
-                  <td> {{item3.productName}}</td>
-            
-            </div>
-            <br>
-    </div>
-</nz-table>
+<h1 class="title">List order for Shop</h1>
+<div  *ngIf="lsOrder">
+  <nz-table>
+    <thead>
+      <tr>
+        <th>Tên Shop</th>
+        <th>Mã Code</th>
+        <th>Tên Sản Phẩm</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item2 of lsOrder.items">
+      <tr *ngFor="let item3 of item2.orderDetails">
+        <td>{{item2.shopName}}</td>
+        <td>{{item2.code}}</td>
+        <td>{{item3.productName}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

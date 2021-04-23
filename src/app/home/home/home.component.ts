@@ -11,7 +11,7 @@ import { orderDto } from 'src/app/model/orderDto';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  user: UserProfile = null;
+  user: UserProfile;
   isCollapsed = false;
   listAll : any;
   lsOrder:orderDto[]=[];
