@@ -5,6 +5,8 @@
 export const environment = {
   production: false,
   apiUrl: {
+    accountUrl: 'https://account.tpos.dev/',
+    socketUrl: 'http://localhost:3000',
     chatUrl: 'https://localhost:44342/'
   }
 };

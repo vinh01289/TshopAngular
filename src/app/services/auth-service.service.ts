@@ -46,6 +46,9 @@ export class AuthService {
        !this.jwtHelper.isTokenExpired(token);
     }
 
+    getCurrentUser(): UserProfile{
+      return this.currentUser;
+    }
 
 }
 

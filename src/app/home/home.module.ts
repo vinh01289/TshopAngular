@@ -8,10 +8,12 @@ import { ShopOrderComponent } from './shop-order/shop-order.component';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ConversationComponent } from './conversation/conversation.component';
 @NgModule({
   declarations: [
     HomeComponent,
-    ShopOrderComponent
+    ShopOrderComponent,
+    ConversationComponent
   ],
   
   exports:[HomeComponent],
