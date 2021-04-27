@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ConversationComponent } from './home/conversation/conversation.component';
 import { HomeComponent } from './home/home/home.component';
 import { AuthloginService } from './services/authloginservice.service';
-import { ShopComponent } from './shop/shop/shop.component';
+// import { ShopComponent } from './shop/shop/shop.component';
 
 const routes: Routes = [
   { path: '', pathMatch : 'full', redirectTo: '/login' },
@@ -21,7 +21,7 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: 'Home', component: HomeComponent },
-      { path: 'shop', component: ShopComponent },
+      // { path: 'shop', component: ShopComponent },
       { path: 'conversation', component: ConversationComponent},
       //{ path: 'ChangePW', component: ChangePasswordComponent }
     //  {path: 'Department', component: DepartmentComponent}

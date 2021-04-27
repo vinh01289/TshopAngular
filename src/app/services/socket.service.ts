@@ -13,7 +13,9 @@ export class SocketService {
 
   constructor(public authen: AuthService) {
    this.user = this.authen.getCurrentUser();
-   this.socket = io(`${this.socketUrl}?userId=${this.user.id}`);
+   if(this.user){
+    this.socket = io(`${this.socketUrl}?userId=${this.user.id}`);
+   }
     // this.authen.getUserChange().subscribe((res: any) => {
 
     //   console.log('getUserChange', this.socket);
